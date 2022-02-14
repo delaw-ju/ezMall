@@ -1,8 +1,36 @@
 spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/ezmall?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: ez_admin
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
   devtools:
     livereload:
       enabled: true
+
   freemarker:
     cache: false
+
   thymeleaf:
+    check-template-location: true
+    suffix: .html
+    mode: HTML5
+    characterEncoding: utf-8
     cache: false
+    order: 0
+    prefix: classpath:templates/
+
+jpa:
+  database-platform: org.hibernate.dialect.H2Dialect
+  hibernate:
+    ddl-auto: update
+  naming:
+    physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  propertis:
+    hibernate:
+      show-sql: true
+      format_sql: true
+
+#mybatis:
+#  type-aliases-package: org.buup.ezmall.admin.domain.entity

@@ -1,0 +1,17 @@
+spring:
+
+  devtools:
+    livereload:
+      enabled: true
+
+  freemarker:
+    cache: false
+
+  thymeleaf:
+    cache: false
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: tutorial
